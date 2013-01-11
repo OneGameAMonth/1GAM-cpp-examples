@@ -1,0 +1,19 @@
+To build in general:
+cd Build
+cmake ..
+make
+
+OR:
+
+cd Build
+cmake -G <generatorName> ..
+make
+
+On Ubuntu add this:
+cd Build
+cmake -D UBUNTU:BOOL=TRUE ..
+make
+
+
+Windows users, define SDL_INCLUDE_DIR, FREETYPE_INCLUDE_DIRS, OPENGL_INCLUDE_DIR,
+SDL_LIBRARY, FREETYPE_LIBRARIES, PNG_INCLUDE_DIRS, PNG_LIBRARIES and OPENGL_gl_LIBRARY yourself to the correct paths.

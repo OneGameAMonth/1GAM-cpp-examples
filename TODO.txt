@@ -1,0 +1,18 @@
+[Font rendering: ]
+[*] Add (or don't mess up existing) Unicode UTF-32 support.                             [DONE]
+[*] Add (or don't mess up existing) support for non-monospaced fonts.                   [DONE]
+[*] Implement batch drawing, shaders and pure OpenGL 3 core context support.            [NOT DONE]
+[*] Implement texture atlases, also for non-monospaced fonts.                           [DONE]
+[*] Handle metrics properly, and implement ways to calculate the size of the text box.  [PARTIALLY DONE]
+[*] Add automatic linebreaks/word-wrapping.                                             [NOT DONE]
+[*] Handle adding of new glyphs codepoints as they are used, dynamically.               [PARTIALLY DONE]
+[*] Implement font searching based on language/charset, weight, pitch and spacing.      [DONE]
+[*] Add OSX and Windows support.                                                        [NOT DONE]
+
+Not sure if I will implement word wrapping. It is something which is more at home in an UI.
+Glyphs are loaded into the atlas as they are discovered in the string to be rendered. However,
+if a codepoint is *not* found in the font file, no new font files will be loaded to render the glyph.
+But this could be implemented outside the font class.
+
+[Quadtree: ]
+[*] Change rendering to solely use OpenGL 3 core.                                       [NOT DONE]
